@@ -1,7 +1,7 @@
 {
   "name": "devconnector",
   "version": "1.0.0",
-  "description": "Connecting devs all over",
+  "description": "Connecting devs down under",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
