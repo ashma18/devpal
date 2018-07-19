@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
-//Requiring routes
+// Requiring routes
 const users = require('./routes/api/users')
 const profile = require('./routes/api/profile')
 const posts = require('./routes/api/posts')
@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 // DB Config
 const db = require('./config/keys').mongoURI;
 
-//Connect to MongoDB
+// Connect to MongoDB
 mongoose
     .connect(db)
     .then(() => console.log('MongoDB Connected'))
@@ -29,7 +29,7 @@ app.use(passport.initialize());
 //Passport Config
 require('./config/passport')(passport);
 
-//Use Routes setting url to constants above
+// Use Routes setting url to constants above
 app.use('/api/users', users);
 app.use('/api/profile', profile);
 app.use('/api/posts', posts);
